@@ -13,8 +13,10 @@ TransactionResult _$TransactionResultFromJson(Map<String, dynamic> json) {
         _$TransactionResultStatusEnumMap, json['transactionStatus']),
     statusMessage: json['statusMessage'] as String?,
     transactionId: json['transactionId'] as String?,
+    grossAmount: json['grossAmount'] as String?,
     orderId: json['orderId'] as String?,
     paymentType: json['paymentType'] as String?,
+    pdfUrl: json['pdfUrl'] as String?,
   );
 }
 
@@ -25,8 +27,10 @@ Map<String, dynamic> _$TransactionResultToJson(TransactionResult instance) =>
           _$TransactionResultStatusEnumMap[instance.transactionStatus],
       'statusMessage': instance.statusMessage,
       'transactionId': instance.transactionId,
+      'grossAmount': instance.grossAmount,
       'orderId': instance.orderId,
       'paymentType': instance.paymentType,
+      'pdfUrl': instance.pdfUrl,
     };
 
 K _$enumDecode<K, V>(

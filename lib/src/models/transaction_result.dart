@@ -9,7 +9,9 @@ class TransactionResult {
   final String? statusMessage;
   final String? transactionId;
   final String? orderId;
+  final String? grossAmount;
   final String? paymentType;
+  final String? pdfUrl;
 
   TransactionResult({
     this.isTransactionCanceled = true,
@@ -17,7 +19,9 @@ class TransactionResult {
     this.statusMessage,
     this.transactionId,
     this.orderId,
+    this.grossAmount,
     this.paymentType,
+    this.pdfUrl,
   });
 
   factory TransactionResult.fromJson(Map<String, dynamic> json) =>
