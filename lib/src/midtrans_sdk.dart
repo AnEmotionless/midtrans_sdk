@@ -23,9 +23,7 @@ class MidtransSDK {
         try {
           Map<String, dynamic> map =
               new Map<String, dynamic>.from(call.arguments);
-          print('printing map di bawah ini');
           print(map);
-          print('kontol');
           var result = TransactionResult.fromJson(map);
           _transactionFinishedCallback?.call(result);
         } catch (e) {
